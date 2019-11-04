@@ -1,0 +1,8 @@
+<h1>Result</h1>
+<% if @result['found'] && @check.exclude?(false) %>
+  <p><strong>Congratulations!</strong> <%= @words.upcase %> is a valid English word!</p>
+  <p>Your score : <%= @result['length'] * 10 %></p>
+<% else %>
+  <p>Sorry but <strong><%= @words.upcase %></strong> doesn't seem to be a valid English word....</p>
+<% end %>
+<%= link_to "Play again", new_path %>
